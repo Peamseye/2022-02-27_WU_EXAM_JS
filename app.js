@@ -11,7 +11,7 @@ var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
     var x = setInterval(function() {
 
         
-        if (clicked > 0 && timer < 0)
+        if (clicked > 0 && timer > 0)
         {
             timer--;
             label2.innerHTML = `Time left:${timer}`;
