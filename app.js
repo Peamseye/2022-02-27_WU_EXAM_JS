@@ -1,7 +1,7 @@
 var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
     
     // Update the count down every 1 second
-    var timer = 10;
+    var timer = 20;
     let clicked = 0;
 
     let label = document.querySelector(".aim-text");
@@ -42,5 +42,5 @@ function handleClick() {
     {
         clicked+=1;
     }
-    label.innerHTML = `Clicked:${clicked} |`;
+    label.innerHTML = `Points:${clicked} |`;
 }
