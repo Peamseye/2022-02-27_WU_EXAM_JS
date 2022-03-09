@@ -7,24 +7,34 @@
 body {
   background-color: gray;
   text-align: center;
-  padding: 20px;
+  padding: 10px;
 }
 
 header {
-  display: flex;
   align-items: center;
-  height: 80%;
+  text-align: center;
   background-color: snow;
+  padding: 20px;
+}
+
+article {
+  background-color: white;
+  padding: 10px; 
+}
+
+.PointContainer {
+  text-align: right;
+  font-size: 30px;
+}
+
+.ButtonMenu {
+  width: 100%;
 }
 
 .ButtonMenu img {
   height: 100px;
   width: 100px;
   padding: 10px;
-}
-
-label {
-  font-size: 40px;
 }
 
 img:hover {
