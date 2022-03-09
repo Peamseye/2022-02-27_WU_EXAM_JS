@@ -23,6 +23,7 @@ article {
 }
 
 .PointContainer {
+  display: flex;
   text-align: right;
   font-size: 30px;
 }
