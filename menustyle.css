@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+header {
+    text-align: center;
+    font-size: 40px;
+    background-color: white;
+  }
+
+article {
+    background-color: grey;
+}
+
+footer {
+    text-align: center;
+    font-size: 40px;
+    background-color: white;
+}
+
+a:link,
+a:visited {
+  background-color: transparent;
+  color: black;
+  padding: 10px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+nav {
+  background-color: whitesmoke;
+  padding: 0px;
+
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 666;
+}
+
