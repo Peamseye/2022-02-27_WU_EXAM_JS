@@ -7,7 +7,7 @@
 body {
   background-color: gray;
   text-align: center;
-  padding: 10px;
+
 }
 
 header {
@@ -19,7 +19,7 @@ header {
 
 article {
   background-color: white;
-  padding: 10px; 
+  display: flex;
 }
 
 .PointContainer {
