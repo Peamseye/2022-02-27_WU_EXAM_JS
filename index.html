@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Examination Javascript</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="app.js"></script>
 </head>
 
 <body>
@@ -19,8 +18,12 @@
                 <p id="time"></p>
             </label>
         </div>
-        <p id="demo"></p>
-
+        <div class="Restart">
+            <label type="label4" class="restart-game">
+                <p id="retry"></p>
+            </label>
+        </div>
+        
     </header>
     
     <article>
@@ -69,8 +72,9 @@
         <script> 
 
             // Update the count down every 1 second
-    var timer = 5;
+    var timer = 30;
     let clicked = 0;
+    let retryclick = false;
     
     var posX = 1;
 
@@ -80,6 +84,7 @@
     let label = document.querySelector(".aim-text");
     let label2 = document.querySelector(".time-left");
     let label3 = document.querySelector(".point-btn");
+    let label4 = document.querySelector(".restart-game")
     
     var x = setInterval(function() {
 
@@ -90,19 +95,21 @@
             label2.innerHTML = `Time left:${timer}`;
         }
         else if (clicked > 0){
-            window.location.href='mainmenu.html';
             label2.innerHTML = "GAME OVER";
             label3.innerHTML = "";
+            label4.innerHTML = "RETRY";
         }
 
       document.getElementById("time").innerHTML = timer;
 
     }, 1000);
 
-
-
-
 label3.addEventListener("click", handleClick);
+label4.addEventListener("click", handleClick2);
+
+function handleClick2() {
+    window.location.href='mainmenu.html';
+}
 
 function handleClick() {
     if (timer > 0)

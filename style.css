@@ -11,6 +11,10 @@ body {
 }
 
 header {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+
   align-items: center;
   text-align: center;
   background-color: snow;
@@ -29,6 +33,13 @@ article {
   font-size: 30px;
 }
 
+.Restart {
+  display: flex;
+  text-align: right;
+  font-size: 30px;
+  grid-column: 5;
+}
+
 .ButtonMenu {
   width: 100%;
 }
@@ -44,3 +55,9 @@ img:hover {
   transition: 0.5s;
 }
 
+a:link,
+a:visited {
+  background-color: transparent;
+  text-decoration: none;
+  display: inline-block;
+}
