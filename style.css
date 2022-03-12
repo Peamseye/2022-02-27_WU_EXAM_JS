@@ -19,8 +19,8 @@ header {
 
 article {
   width: 100%;
-  background-color: white;
-  display: flex;
+  height: 100%
+  background-color white;
 }
 
 .PointContainer {
@@ -47,8 +47,9 @@ img:hover {
 .grid-container {
 
   display: grid;
-  grid-template-columns: 160% 160% 160% 160% 160%;
-  grid-template-rows: 20% 20% 20% 20% 20%;
+  align-items: center;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 68% 70% 70% 70% 68%;
 }
 .grid-item {
   
@@ -56,6 +57,6 @@ img:hover {
   padding: 15px;
   font-size: 30px;
   grid-column: 3;
-  grid-row: 2;
+  grid-row: 3;
   
 }

@@ -18,6 +18,7 @@ var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
         }
         else if (clicked > 0){
             label2.innerHTML = "EXPIRED";
+            label3.innerHTML = "Main Menu:";
         }
         
 
