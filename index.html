@@ -35,10 +35,16 @@
                  }
             </style>
 
-        <style>
-
         
-            .grid-container {
+
+        <style>
+:root {
+    --posX: 4;
+    --posY: 2;
+}
+        
+
+        .grid-container {
          display: grid;
          align-items: center;
          grid-template-columns: 20% 20% 20% 20% 20%;
@@ -49,9 +55,10 @@
          color: white;
          padding: 15px;
          font-size: 30px;
-         grid-column: 3;
-         grid-row: 3;
+         grid-column: var(--posX);
+         grid-row: var(--posY);
          }
+
         </style>
             
         <div class="grid-container" id="BtnGrid">
@@ -64,6 +71,8 @@
             // Update the count down every 1 second
     var timer = 30;
     let clicked = 0;
+    
+    var posX = 1;
 
     let randomX = Math.floor(Math.random() * 5) + 1;
     let randomY = Math.floor(Math.random() * 5) + 1;
@@ -100,11 +109,11 @@ function handleClick() {
         clicked+=1;
     }
     label.innerHTML = `Points:${clicked} |`;
-    document.getElementById("demo").innerHTML = Math.floor(Math.random() * 5) + 1;
-    document.getElementById("grid-item").gridColumn = randomX;
-    document.getElementById("grid-item").gridRow =  randomY;
+  
+    document.documentElement.style.setProperty('--posY', Math.floor(Math.random() * 5) + 1);
+    document.documentElement.style.setProperty('--posX', Math.floor(Math.random() * 5) + 1);
 
-    
+    document.setElementById("grid-item").gridRow =  2;
     }
 
         </script>
