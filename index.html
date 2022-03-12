@@ -21,11 +21,6 @@
         </div>
         <p id="demo"></p>
 
-        <script>
-        document.getElementById("demo").innerHTML =
-        Math.floor(Math.random() * 10);
-</script>
-
     </header>
     
     <article>
@@ -41,6 +36,8 @@
             </style>
 
         <style>
+
+        
             .grid-container {
          display: grid;
          align-items: center;
@@ -53,14 +50,64 @@
          padding: 15px;
          font-size: 30px;
          grid-column: 3;
-         grid-row: 4;
+         grid-row: 3;
          }
         </style>
             
-        <div class="grid-container">
+        <div class="grid-container" id="BtnGrid">
             <div class="grid-item"><div class="ButtonMenu"><label type="label3" class="point-btn"><img src="RedDot.png" alt="" srcset=""/></label></div></div>
         </div>
 
+
+        <script> 
+
+            // Update the count down every 1 second
+    var timer = 30;
+    let clicked = 0;
+
+    let randomX = Math.floor(Math.random() * 5) + 1;
+    let randomY = Math.floor(Math.random() * 5) + 1;
+
+    let label = document.querySelector(".aim-text");
+    let label2 = document.querySelector(".time-left");
+    let label3 = document.querySelector(".point-btn");
+    
+    var x = setInterval(function() {
+
+        
+        if (clicked > 0 && timer > 0)
+        {
+            timer--;
+            label2.innerHTML = `Time left:${timer}`;
+        }
+        else if (clicked > 0){
+            label2.innerHTML = "EXPIRED";
+            label3.innerHTML = "";
+        }
+
+      document.getElementById("time").innerHTML = timer;
+
+    }, 1000);
+
+
+
+
+label3.addEventListener("click", handleClick);
+
+function handleClick() {
+    if (timer > 0)
+    {
+        clicked+=1;
+    }
+    label.innerHTML = `Points:${clicked} |`;
+    document.getElementById("demo").innerHTML = Math.floor(Math.random() * 5) + 1;
+    document.getElementById("grid-item").gridColumn = randomX;
+    document.getElementById("grid-item").gridRow =  randomY;
+
+    
+    }
+
+        </script>
         
 
     </article>
