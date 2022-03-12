@@ -44,19 +44,3 @@ img:hover {
   transition: 0.5s;
 }
 
-.grid-container {
-
-  display: grid;
-  align-items: center;
-  grid-template-columns: 20% 20% 20% 20% 20%;
-  grid-template-rows: 68% 70% 70% 70% 68%;
-}
-.grid-item {
-  
-  color: white;
-  padding: 15px;
-  font-size: 30px;
-  grid-column: 3;
-  grid-row: 3;
-  
-}

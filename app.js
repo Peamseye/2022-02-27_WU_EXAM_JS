@@ -18,7 +18,7 @@ var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
         }
         else if (clicked > 0){
             label2.innerHTML = "EXPIRED";
-            label3.innerHTML = "Main Menu:";
+            label3.innerHTML = "";
         }
         
 
@@ -42,6 +42,8 @@ function handleClick() {
     if (timer > 0)
     {
         clicked+=1;
+        Math.floor(Math.random() * 5) + 1;
+        Math.floor(Math.random() * 5) + 1;
     }
     label.innerHTML = `Points:${clicked} |`;
 }
