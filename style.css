@@ -63,3 +63,24 @@ a:visited {
   text-decoration: none;
   display: inline-block;
 }
+
+:root {
+  --posX: 3;
+  --posY: 3;
+}
+      
+
+      .grid-container {
+       display: grid;
+       align-items: center;
+       grid-template-columns: 20% 20% 20% 20% 20%;
+       grid-template-rows: 90% 90% 90% 90% 90%;
+       }
+       
+       .grid-item {
+       color: white;
+       padding: 15px;
+       font-size: 30px;
+       grid-column: var(--posX);
+       grid-row: var(--posY);
+       }
